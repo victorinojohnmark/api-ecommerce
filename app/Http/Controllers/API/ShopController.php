@@ -38,6 +38,9 @@ class ShopController extends Controller
 
     public function show(Request $request, Shop $shop)
     {
+        // todo apply policy
+        // - if user has shop then only user can view shop detail
+
         return new ShopResource($shop);
         
     }
