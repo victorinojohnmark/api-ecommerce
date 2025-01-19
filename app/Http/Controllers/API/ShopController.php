@@ -36,11 +36,8 @@ class ShopController extends Controller
         return new ShopResource($shop);
     }
 
-    public function show(Request $request)
+    public function show(Request $request, Shop $shop)
     {
-        $user = Auth::user();
-        $shop = $user->shop;
-
         return new ShopResource($shop);
         
     }
